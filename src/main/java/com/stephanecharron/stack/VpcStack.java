@@ -8,6 +8,7 @@ import software.amazon.awscdk.services.ec2.*;
 import software.constructs.Construct;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class VpcStack extends Stack {
@@ -36,7 +37,7 @@ public class VpcStack extends Stack {
 
             Vpc vpc = Vpc.Builder.create(this, "ping-"+vpcTopology.getName())
                     .subnetConfiguration(
-                            com.sun.tools.javac.util.List.of(
+                            List.of(
                                     subnetConfigurationPrivate,subnetConfigurationPublic
                             )
                     )
