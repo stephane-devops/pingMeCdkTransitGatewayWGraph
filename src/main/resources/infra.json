@@ -1,0 +1,19 @@
+{
+  "vpcs":[
+    {
+      "cidr": "10.0.1.0/24",
+      "name": "vpc1",
+      "links": ["vpc2","vpc3"]
+    },
+    {
+      "cidr": "10.0.2.0/24",
+      "name": "vpc2",
+      "links": ["vpc1","vpc3"]
+    },
+    {
+      "cidr": "10.0.3.0/24",
+      "name": "vpc3",
+      "links": ["vpc1","vpc2"]
+    }
+  ]
+}
