@@ -15,4 +15,5 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
  * `cdk diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
-Enjoy!
+## This CDK app use region and account on cdk command line in context arguments
+`` cdk synth --all --context region=my-aws-region --context account=********``
