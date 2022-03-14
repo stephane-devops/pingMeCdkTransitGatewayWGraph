@@ -95,13 +95,7 @@ public class GraphPlotService {
     private String getVertexLabel(VpcVertex vpcVertex) {
 
         String label = vpcVertex.getVpcTopology().getName() + "\n";
-        label += vpcVertex.getVpcTopology().getCidr() + "\n";
-
-        label += vpcVertex.getBastion().getInstanceId().contains("Token") ?
-                "" : vpcVertex.getBastion().getInstancePrivateIp() + "\n";
-
-        label += vpcVertex.getBastion().getInstancePrivateIp().contains("Token") ?
-                "" : vpcVertex.getBastion().getInstancePrivateIp() + "\n";
+        label += vpcVertex.getVpcTopology().getCidr();
         return label;
 
     }
